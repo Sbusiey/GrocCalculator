@@ -1,0 +1,9 @@
+<StackLayout class="avatar">
+    <StackLayout class="photo" [backgroundImage]="person.photo"
+        [width]="width" [height]="height"></StackLayout>
+    <StackLayout *ngIf="displayName">
+        <Label [text]="person.name.firstName"></Label>
+        <Label class="last-name" [text]="person.name.lastName"></Label>
+        <Label class="item-price" [text]=" 'R' + person.price"></Label>
+    </StackLayout>
+</StackLayout>
